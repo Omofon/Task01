@@ -13,37 +13,35 @@ console.log('');
 let start = 1;
 let range = 2;
 */
-
-/*
-// prompt for user name
-let userName = prompt("Enter your name: ");
-console.log(`Hello ${userName}`);
-console.log('');
-*/
-let score = 0;
-let start = 1;
-let range = 2;
 //generate a number from given range
-function randomNumber(start, range) {
-  let getRandom = Math.floor(Math.random() * (range - start + 1)) + start;
-  return getRandom;
-};
-randomNumber();
 
-let inputNum = parseInt(prompt(`Guess between ${start} and ${range}`));
+function randomNumber(start, range, score){
+
+// prompt for user name
+  const userName = prompt("Enter your name: ");
+  console.log(`Hello ${userName}`);
+  console.log('');
+  console.log(`Start value: ${start};/nRange Value: ${range}`);
+
+  score = 0;
+  start = 1;
+  range = 2;
+  let getRandom = Math.floor(Math.random() * (range - start + 1)) + start;
+//  return getRandom;
+
+  let inputNum = parseInt(prompt(`Guess between ${start} and ${range}`));
   console.log('');
 
-if (inputNum > range || inputNum < start) {
-  console.log(`Start value: ${start}; Range Value: ${range}`);
-  console.log('Pick between the values')
-  let inputNum = parseInt(prompt(`Guess between ${start} and ${range}`));
-  };
+  if (inputNum > range || inputNum < start) {
+  console.log("You're out of range"); 
+    return inputNum;
 
-if (inputNum == getRandom) {
+  if (inputNum == getRandom) {
   score++
   console.log(`You're correct! /n Your score is ${score}`);
   };
-if (inputNum !== getRandom) {
+  if (inputNum !== getRandom) {
   console.log(`You're wrong! /n Your score is ${score}`);
    randomNumber();
   };
+};
