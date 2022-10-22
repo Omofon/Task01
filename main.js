@@ -16,7 +16,7 @@ console.log("LET'S GO!!!");
 // declaring and assigning values
 console.log('')
 let rep = parseInt(prompt("How many stages are you going? ")) + 1;
-let min = 1, max = 1, point = 0;
+let min = 1, max = 1, point = 0, stage = 1;
 
 // looping for max
 while (max < rep) {
@@ -26,7 +26,8 @@ while (max < rep) {
   console.log('');
   // function rand to generate random number
   const rand = () => {
-    //console.log(`Start value= ${min}; Range Value= ${max}`);
+
+  //console.log(`Start value= ${min}; Range Value= ${max}`);
     var result = Math.floor(Math.random() * (max - min + 1)) + min;
     //console.log(result)
 
